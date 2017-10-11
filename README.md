@@ -18,28 +18,31 @@ Build:
 5. Remember which payload you put into which folder ;)
 
 Use:
-1. Switch Position 2
+1. Set switch position 2
 2. Plug in
-3. See color wheel (Order will be R G B Y C M W OFF in an infinite loop only showing non-"empty" named)
+3. See color wheel (Order will be R G B Y C M W OFF in an infinite loop one second each only showing non-"empty" named)
 4. Switch Position 1 to choose
 5. Replug or carry arround
 6. Profit
 
-This will look like the folowing, where payload\_[color]\_[anyName] will be the naming scheme:
+The folder structure will look like the following, where payload\_[color]\_[anyName] will be the naming scheme:
 
 ```
 payloads/
-	payload_B_BluePayload
-	payload_G_Green
-	payload_OFF_empty
-	payload_W_network
-	payload_C_empty  
-	payload_M_PoisonBunnyTap
-	payload_R_ReverseShellEmpire
-	payload_Y_empty
+	payload_B_BluePayload/
+	payload_G_Green/
+	payload_OFF_empty/
+	payload_W_network/
+	payload_C_empty/  
+	payload_M_PoisonBunnyTap/
+	payload_R_ReverseShellEmpire/
+	payload_Y_empty/
+	switch1/
+	switch2/
+		payload.txt <-- This is where the magic happens
 ```
 
-Switch overview:
+Switch Assignment:
 - switch1 (Execution mode)
 - switch2 (Setup mode)
 - switch3 (Classic arming mode)
