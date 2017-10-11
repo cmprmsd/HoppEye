@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# Title:         MeGreen
+# Author:        H8.to
+# Version:       0.1
+
+
+##################################################################
+#                  DO NOT EDIT BELOW THIS LINE                   #
+##################################################################
+
+ATTACKMODE HID
+Q STRING GREEN

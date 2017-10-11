@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+# Title:         MeBlue
+# Author:        H8.to
+# Version:       0.1
+
+##################################################################
+#                  DO NOT EDIT BELOW THIS LINE                   #
+##################################################################
+ATTACKMODE HID
+Q STRING BLUE DAB N DI DAB N DI
+
