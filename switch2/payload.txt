@@ -11,7 +11,7 @@
 #								 #
 ##################################################################
 
-ATTACKMODE SERIAL ECM_ETHERNET
+#ATTACKMODE SERIAL ECM_ETHERNET # Uncomment for debugging purposes. Faster boot without.
 
 targetPayload = 0
 i = 0
