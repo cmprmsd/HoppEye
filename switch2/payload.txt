@@ -32,10 +32,12 @@ while [[ $SWITCH_POSITION = switch2 ]]; do
 	done
 done
 
+# Starting Blinking for Copy and Solid for DONE
+LED $i 100
 rm -rf /root/udisk/payloads/switch1/*
 cp -R /root/udisk/payloads/payload_${i}_*/* /root/udisk/payloads/switch1/
 
 echo "LED $i 100;sleep 2" > /tmp/tmp && cat /root/udisk/payloads/switch1/payload.txt >> /tmp/tmp && mv /tmp/tmp /root/udisk/payloads/switch1/payload.txt
 
 sync
-LED $i 100
+LED $i SOLID
