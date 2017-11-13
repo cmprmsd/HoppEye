@@ -13,6 +13,9 @@
 
 #ATTACKMODE SERIAL ECM_ETHERNET # Uncomment for debugging purposes. Faster boot without.
 
+# Adding CPU Throttling to prevent overheating.
+CUCUMBER ENABLED
+
 targetPayload = 0
 i = 0
 
@@ -42,3 +45,13 @@ sed -i "2i LED $i 100;sleep 2" /root/udisk/payloads/switch1/payload.txt
 
 sync
 LED $i SOLID
+
+# Adding Shutdown script with bonus "Wait 3 sec, blink twice and shutdown".
+sleep 3
+LED OFF
+LED $i SOLID
+LED OFF
+LED $i SOLID
+LED OFF
+LED $i SOLID
+shutdown 0
