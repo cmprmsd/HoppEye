@@ -37,7 +37,8 @@ LED $i 100
 rm -rf /root/udisk/payloads/switch1/*
 cp -R /root/udisk/payloads/payload_${i}_*/* /root/udisk/payloads/switch1/
 
-echo "LED $i 100;sleep 2" > /tmp/tmp && cat /root/udisk/payloads/switch1/payload.txt >> /tmp/tmp && mv /tmp/tmp /root/udisk/payloads/switch1/payload.txt
+# Improved LED Indication on new payload. Adds to 2nd Line of Payload.
+sed -i "2i LED $i 100;sleep 2" /root/udisk/payloads/switch1/payload.txt
 
 sync
 LED $i SOLID
