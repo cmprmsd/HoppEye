@@ -14,7 +14,7 @@
 #ATTACKMODE SERIAL ECM_ETHERNET # Uncomment for debugging purposes. Faster boot without.
 
 # Adding CPU Throttling to prevent overheating.
-CUCUMBER ENABLED
+CUCUMBER ENABLE
 
 targetPayload = 0
 i = 0
