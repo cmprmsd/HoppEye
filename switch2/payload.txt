@@ -40,10 +40,17 @@ LED $i 100
 rm -rf /root/udisk/payloads/switch1/*
 cp -R /root/udisk/payloads/payload_${i}_*/* /root/udisk/payloads/switch1/
 
-# Improved LED Indication on new payload. Adds to 2nd Line of Payload.
-sed -i "2i LED $i 100;sleep 2" /root/udisk/payloads/switch1/payload.txt
+# Improved LED Indication on new payload. Adds to 2nd/3rd Line of Payload. 
+sed -i '2G' /root/udisk/payloads/switch1/payload.txt
+sed -i "2i# Adding LED Indication to Hop-Swapped Payload." /root/udisk/payloads/switch1/payload.txt
+sed -i "3iLED $i 100" /root/udisk/payloads/switch1/payload.txt
+sed -i "4isleep 2" /root/udisk/payloads/switch1/payload.txt
+sleep .5
 
+# Added LED Indication for Syncing the Disk Partition.
 sync
+LED $i VERYFAST
+wait
 LED $i SOLID
 
 # Adding Shutdown script with bonus "Wait 3 sec, blink twice and shutdown".
